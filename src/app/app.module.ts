@@ -6,18 +6,24 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { MatSliderModule } from '@angular/material/slider';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent
+    HelloWorldComponent,
+    CalculatorComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSliderModule,
     MatButtonModule,
-    MatSliderModule
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

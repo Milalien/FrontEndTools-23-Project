@@ -1,7 +1,10 @@
-<p>hello-world works!</p>
-<button mat-raised-button color="Warn">Warn</button>
-<div>
-    <mat-slider>
-        <input matSliderThumb>
-    </mat-slider>
+<h1>Harjoitus{{"titleMsg"}}</h1>
+<div class="content">
+    <img alt="item" [src]="itemImageUrl">
+    <button (click)="onButtonClicked()" mat-raised-button color="warn">Vaihda kuva</button>
+    <div>
+        <mat-slider>
+            <input matSliderThumb>
+        </mat-slider>
+    </div>
 </div>

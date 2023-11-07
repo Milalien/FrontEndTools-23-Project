@@ -57,11 +57,10 @@ p {
 }
 
 .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
+
+    margin: 10px 25% auto 25%;
+    max-width: 50%;
+    text-align: center;
     align-items: center;
 }
 
