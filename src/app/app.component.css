@@ -57,8 +57,8 @@ p {
 }
 
 .content {
-
-    margin: 10px 25% auto 25%;
+    padding: 2px;
+    margin: auto;
     max-width: 50%;
     text-align: center;
     align-items: center;

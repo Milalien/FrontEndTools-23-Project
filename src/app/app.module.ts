@@ -9,13 +9,15 @@ import { MatSliderModule } from '@angular/material/slider';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
     CalculatorComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

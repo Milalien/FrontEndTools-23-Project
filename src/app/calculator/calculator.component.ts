@@ -9,6 +9,7 @@ export class CalculatorComponent {
   buttons: string[] =
     ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', 'C', '0', '+', '='];
   result = "";
+  prevVal = "";
 
   calculate(value: string) {
 
@@ -23,11 +24,11 @@ export class CalculatorComponent {
     } else if (value == "C") {
       this.result = "";
       console.log(this.result);
-    } /*else if (
-      (this.result.endsWith("+") ||
-        this.result.endsWith("-") ||
-        this.result.endsWith("*") ||
-        this.result.endsWith("/")) &&
+    } else if (
+      (this.prevVal == "+" ||
+        this.prevVal == "-" ||
+        this.prevVal == "/" ||
+        this.prevVal == "*") &&
       (value == "+" ||
         value == "-" ||
         value == "/" ||
@@ -35,14 +36,14 @@ export class CalculatorComponent {
       )) {
       this.result = this.result;
       console.log("double operator not allwed");
-    }*/
+    }
 
     else {
       this.result = this.result + value;
       console.log(this.result);
     }
 
-
+    this.prevVal = value;
 
   }
 }

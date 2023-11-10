@@ -1,8 +1,11 @@
-<mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile colspan="4" rowspan="1" [style.background]="'lightgrey'">
-        <h2>{{result}}</h2>
-    </mat-grid-tile>
-    <mat-grid-tile *ngFor="let button of buttons" [style.background]="'lightpink'">
-        <button mat-raised-button (click)="calculate(button)">{{button}}</button>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="content">
+    <h1>Laskin</h1>
+    <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile colspan="4" rowspan="1" [style.background]="'lightgrey'">
+            <h2>{{result}}</h2>
+        </mat-grid-tile>
+        <mat-grid-tile *ngFor="let button of buttons" [style.background]="'lightpink'">
+            <button mat-raised-button (click)="calculate(button)">{{button}}</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
