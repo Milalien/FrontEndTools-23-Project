@@ -10,6 +10,16 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -17,7 +27,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
     HelloWorldComponent,
     CalculatorComponent,
     PagenotfoundComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    ToolbarComponent,
+    TemplatedrivenformComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +37,15 @@ import { FeedbackComponent } from './feedback/feedback.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

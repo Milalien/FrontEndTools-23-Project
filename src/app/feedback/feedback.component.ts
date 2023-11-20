@@ -12,30 +12,30 @@ export class FeedbackComponent {
 
   constructor() {
     this.questions =
-      [new Question("Arviosi tästä koulusta"),
-      new Question("Arviosi tästä kurssista"),
-      new Question("Arviosi motivaatiotasostasi"),
-      new Question("Arviosi ilmapiiristä"),
-      new Question("Arviosi elämänlaadustasi")];
+      [new Question("How would you rate this class?"),
+      new Question("Your rating of this school?"),
+      new Question("How well are you motivated?"),
+      new Question("How would you rate your skills?"),
+      new Question("Your rating of the social enviroment?")];
   }
   onInputChange(event: any, question: Question) {
     console.log(event.target.value);
     switch (event.target.value) {
 
       case '1':
-        question.description = "Kaamea";
+        question.description = "Terrible";
         break;
       case '2':
-        question.description = "Huono";
+        question.description = "Bad";
         break;
       case '3':
-        question.description = "Keskiverto";
+        question.description = "Avarage";
         break;
       case '4':
-        question.description = "Hyvä";
+        question.description = "Good";
         break;
       case '5':
-        question.description = "Erinomainen";
+        question.description = "Exellent";
         break;
 
     }
