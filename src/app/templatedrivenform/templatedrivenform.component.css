@@ -1,0 +1,15 @@
+.checker {
+    margin: 0 12px;
+}
+
+.tdfCard {
+    background-color: lightpink;
+    width: fit-content;
+    margin: auto;
+
+}
+
+mat-label {
+    color: rgb(85, 0, 59);
+
+}

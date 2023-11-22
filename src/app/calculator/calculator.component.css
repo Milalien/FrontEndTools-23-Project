@@ -1,4 +1,13 @@
-mat-grid-list {
+.content {
     width: 80%;
     margin: auto;
+}
+
+mat-grid-tile {
+    background: lightpink;
+    font-size: x-large;
+}
+
+h1 {
+    color: aliceblue;
 }

@@ -14,6 +14,8 @@ export class TemplatedrivenformComponent {
   email: string = "";
   userN: string = "";
   pWord: string = "";
+  pWord2: string = "";
+
 
   currentPerson: Person = new Person();
 
@@ -24,6 +26,8 @@ export class TemplatedrivenformComponent {
     this.currentPerson.email = this.email;
     this.currentPerson.username = this.userN;
     this.currentPerson.password = this.pWord;
+    this.currentPerson.password2 = this.pWord2;
+
   }
   onSubmit(e: any) {
     console.log(e.value.firstName);
