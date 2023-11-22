@@ -10,7 +10,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
-//--- mat modules: ---
+//--- modules: ---
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -22,10 +22,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
-
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 
 @NgModule({
@@ -36,13 +34,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     PagenotfoundComponent,
     FeedbackComponent,
     ToolbarComponent,
-    TemplatedrivenformComponent
+    TemplatedrivenformComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    //--- mat modules: ---
+    //--- modules: ---
     FormsModule,
     MatButtonModule,
     MatCardModule,
@@ -54,7 +53,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatMenuModule,
     MatSelectModule,
     MatToolbarModule,
-    MatSliderModule
+    MatSliderModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

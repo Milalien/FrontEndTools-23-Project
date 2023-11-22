@@ -1,4 +1,5 @@
 <mat-card class="tdfCard">
+    <mat-card-header><mat-card-title>Template driven form</mat-card-title></mat-card-header>
     <mat-card-content>
         <form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
             <div>
@@ -46,9 +47,9 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Username</mat-label>
                     <input matInput placeholder="Username*" name="username" [(ngModel)]="currentPerson.username"
-                        #username="ngModel" required minlength="3">
+                        #username="ngModel" required minlength="5">
                     <mat-error *ngIf="username.hasError('required')">Enter your username</mat-error>
-                    <mat-error *ngIf="username.hasError('minlength')">Minimun 3 characters required</mat-error>
+                    <mat-error *ngIf="username.hasError('minlength')">Minimun 5 characters required</mat-error>
                 </mat-form-field>
             </div>
             <div>
@@ -59,7 +60,7 @@
                         pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
                     <mat-error *ngIf="password.hasError('required')">Enter your password</mat-error>
                     <mat-error *ngIf="password.hasError('minlength')">Minimun 8 characters required</mat-error>
-                    <mat-error *ngIf="password.hasError('pattern')">Password must contain atleast 1 uppercase letter, 1
+                    <mat-error *ngIf="password.hasError('pattern')">Must contain atleast 1 uppercase letter, 1
                         lowercase letter and 1 number.</mat-error>
                 </mat-form-field>
             </div>
@@ -74,7 +75,15 @@
                 </mat-form-field>
             </div>
             <div>
-                <mat-checkbox class="checker" color="primary" required>Accept the terms and conditions *</mat-checkbox>
+
+                <mat-checkbox required>Accept the terms and conditions *</mat-checkbox>
+
+                <mat-checkbox name="conditions" [(ngModel)]="conditions" #conditions="ngModel">
+                    Accept the terms and conditions
+                </mat-checkbox>
+                <mat-error *ngIf="conditions.invalid && conditions.dirty">
+                    Required
+                </mat-error>
             </div>
             <button mat-raised-button color="accent" type="submit" [disabled]="form1.invalid">Submit</button>
 

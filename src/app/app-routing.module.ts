@@ -5,12 +5,14 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
   { path: 'hello-world', component: HelloWorldComponent },
   { path: 'feedback', component: FeedbackComponent },
   { path: 'templatedrivenform', component: TemplatedrivenformComponent },
+  { path: 'reactiveform', component: ReactiveformComponent },
   { path: '', redirectTo: '/calculator', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent }
 ];

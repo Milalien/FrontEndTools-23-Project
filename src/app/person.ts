@@ -8,7 +8,7 @@ export class Person {
     username: string;
     password: string;
     password2: string;
-
+    conditions: any;
 
     constructor() {
         this.firstName = "";
@@ -18,5 +18,6 @@ export class Person {
         this.username = "";
         this.password = "";
         this.password2 = "";
+        this.conditions = false;
     }
 }

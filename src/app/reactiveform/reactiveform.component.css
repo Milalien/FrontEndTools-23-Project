@@ -1,0 +1,21 @@
+.formcontent {
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-content: baseline;
+}
+
+mat-card-header {
+    padding: 15px;
+}
+
+.rfCard {
+    background-color: lightpink;
+    width: fit-content;
+    margin: auto;
+}
+
+mat-label {
+    color: rgb(85, 0, 59);
+}
