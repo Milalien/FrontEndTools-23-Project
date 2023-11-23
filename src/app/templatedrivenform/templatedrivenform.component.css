@@ -1,3 +1,9 @@
+.formcontent {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: baseline;
+}
+
 .tdfCard {
     background-color: lightpink;
     width: fit-content;
@@ -10,4 +16,10 @@ mat-card-header {
 
 mat-label {
     color: rgb(85, 0, 59);
+}
+
+@media screen and (max-width: 650px) {
+    .formcontent {
+        flex-wrap: wrap;
+    }
 }

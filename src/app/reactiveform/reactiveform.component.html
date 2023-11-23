@@ -67,14 +67,17 @@
 
                     <mat-checkbox formControlName="conditions">
                         Accept the terms and conditions
+                        <mat-error *ngIf="conditions?.invalid && conditions?.dirty">
+                            <p><strong>REQUIRED</strong></p>
+                        </mat-error>
                     </mat-checkbox>
-                    <mat-error *ngIf="conditions?.invalid && conditions?.dirty">
-                        Required
-                    </mat-error>
+
 
                 </div>
             </div>
-            <button mat-raised-button color="accent" type="submit" [disabled]="ProfileForm.invalid">Submit</button>
+            <div class="button">
+                <button mat-raised-button color="accent" type="submit" [disabled]="ProfileForm.invalid">Submit</button>
+            </div>
         </form>
     </mat-card-content>
 </mat-card>

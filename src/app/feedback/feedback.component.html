@@ -1,23 +1,29 @@
-<div class="container-1">
-    <h1>Feedback</h1>
+<mat-card class="fbCard">
 
-    <div *ngFor="let question of questions">
+    <mat-card-header><mat-card-title>
+            Feedback
+        </mat-card-title></mat-card-header>
+    <mat-card-content>
+        <div class="container-1">
 
-        <div class="container">
-            <h4>{{question.header}}</h4>
+            <div class="questionDiv" *ngFor="let question of questions">
+
+                <div class="container">
+                    <h4>{{question.header}}</h4>
+                </div>
+                <div class="container">
+
+                    <mat-slider min="1" max="5" step="1" (input)="onInputChange($event, question)">
+                        <input matSliderThumb>
+                    </mat-slider>
+
+
+                    <p>{{question.description}}</p>
+
+
+
+                </div>
+            </div>
+
         </div>
-        <div class="container">
-
-            <mat-slider min="1" max="5" step="1" (input)="onInputChange($event, question)">
-                <input matSliderThumb>
-            </mat-slider>
-
-
-            <p>{{question.description}}</p>
-
-
-
-        </div>
-    </div>
-
-</div>
+    </mat-card-content></mat-card>

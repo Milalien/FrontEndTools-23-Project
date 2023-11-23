@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Question } from './question';
+import { Question } from '../question';
+import { QuestionsService } from '../services/questions.service';
 
 @Component({
   selector: 'app-feedback',
@@ -10,13 +11,9 @@ export class FeedbackComponent {
 
   questions: Array<Question> = new Array;
 
-  constructor() {
-    this.questions =
-      [new Question("How would you rate this class?"),
-      new Question("Your rating of this school?"),
-      new Question("How well are you motivated?"),
-      new Question("How would you rate your skills?"),
-      new Question("Your rating of the social enviroment?")];
+  constructor(private questionsService: QuestionsService) {
+
+    this.questions = questionsService.getQuestions();
   }
   onInputChange(event: any, question: Question) {
     console.log(event.target.value);

@@ -15,6 +15,7 @@ export class TemplatedrivenformComponent {
   userN: string = "";
   pWord: string = "";
   pWord2: string = "";
+  cond: any;
 
 
   currentPerson: Person = new Person();
@@ -27,6 +28,7 @@ export class TemplatedrivenformComponent {
     this.currentPerson.username = this.userN;
     this.currentPerson.password = this.pWord;
     this.currentPerson.password2 = this.pWord2;
+    this.currentPerson.conditions = this.cond;
 
   }
   onSubmit(e: any) {

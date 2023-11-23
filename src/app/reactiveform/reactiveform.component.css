@@ -1,7 +1,5 @@
 .formcontent {
-
     display: flex;
-
     justify-content: space-evenly;
     align-content: baseline;
 }
@@ -18,4 +16,19 @@ mat-card-header {
 
 mat-label {
     color: rgb(85, 0, 59);
+}
+
+.button {
+    padding: 5px;
+}
+
+mat-checkbox {
+    padding: 5px;
+}
+
+@media screen and (max-width: 650px) {
+    .formcontent {
+        flex-wrap: wrap;
+    }
+
 }

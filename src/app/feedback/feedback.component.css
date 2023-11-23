@@ -1,17 +1,35 @@
+.fbCard {
+    background-color: lightpink;
+    width: fit-content;
+    margin: auto;
+}
+
+mat-card-header {
+    padding: 15px;
+}
+
 .container {
     display: flex;
     flex-direction: row;
     height: 50px;
+
     align-items: center;
 }
 
+
 .container-1 {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: auto;
     width: fit-content;
 }
 
-p {
-    padding: 3%;
+p,
+.questionDiv {
+    padding: 10px;
+}
+
+.questionDiv {
+    width: fit-content;
 }

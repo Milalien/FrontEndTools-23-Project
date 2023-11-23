@@ -12,18 +12,27 @@ import { Person } from '../person';
 export class ReactiveformComponent {
   ProfileForm: FormGroup;
 
+  fName: string = "";
+  lName: string = "";
+  pID: string = "";
+  eMail: string = "";
+  userN: string = "";
+  pWord: string = "";
+  pWord2: string = "";
+  cond: any;
+
   person: Person = new Person();
 
   constructor() {
 
-    this.person.firstName = "Tom";
-    this.person.lastName = "Hanks";
-    this.person.personId = "123456-7890";
-    this.person.email = "tom.hanks@gmail.com";
-    this.person.username = "hanks77";
-    this.person.password = "Awesome1!";
-    this.person.password2 = this.person.password;
-    this.person.conditions = false;
+    this.person.firstName = this.fName;
+    this.person.lastName = this.lName;
+    this.person.personId = this.pID;
+    this.person.email = this.eMail;
+    this.person.username = this.userN;
+    this.person.password = this.pWord;
+    this.person.password2 = this.pWord2;
+    this.person.conditions = this.cond;
 
     this.ProfileForm = new FormGroup({
       firstname: new FormControl(this.person.firstName, [Validators.required, Validators.minLength(2), Validators.pattern('^[a-zA-Z ]*$')]),
