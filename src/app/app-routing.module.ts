@@ -6,6 +6,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { CinemaComponent } from './cinema/cinema.component';
 
 const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'feedback', component: FeedbackComponent },
   { path: 'templatedrivenform', component: TemplatedrivenformComponent },
   { path: 'reactiveform', component: ReactiveformComponent },
+  { path: 'cinema', component: CinemaComponent },
   { path: '', redirectTo: '/calculator', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent }
 ];

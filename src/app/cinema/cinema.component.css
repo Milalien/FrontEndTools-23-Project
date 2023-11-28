@@ -1,0 +1,15 @@
+mat-expansion-panel,
+mat-accordion,
+mat-panel-title,
+mat-panel-description {
+    background-color: lightpink;
+    color: black;
+}
+
+mat-panel-description {
+    text-align: start;
+
+    @media screen and (max-width: 600px) {
+        visibility: hidden;
+    }
+}

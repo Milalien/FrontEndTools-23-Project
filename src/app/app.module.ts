@@ -10,6 +10,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { QuestionsService } from './services/questions.service';
+import { CinemaComponent } from './cinema/cinema.component';
+import { CinemaService } from './services/cinema.service';
 //--- modules: ---
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,8 +27,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ReactiveformComponent } from './reactiveform/reactiveform.component';
-import { QuestionsService } from './services/questions.service';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+
+
 
 
 @NgModule({
@@ -36,7 +43,8 @@ import { QuestionsService } from './services/questions.service';
     FeedbackComponent,
     ToolbarComponent,
     TemplatedrivenformComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    CinemaComponent
   ],
   imports: [
     BrowserModule,
@@ -55,9 +63,12 @@ import { QuestionsService } from './services/questions.service';
     MatSelectModule,
     MatToolbarModule,
     MatSliderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule,
+    HttpClientModule,
+    DatePipe
   ],
-  providers: [QuestionsService],
+  providers: [QuestionsService, CinemaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

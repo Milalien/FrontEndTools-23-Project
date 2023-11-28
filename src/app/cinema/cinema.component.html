@@ -1,0 +1,19 @@
+<h1>Finnkino uutisia</h1>
+<mat-accordion>
+    <mat-expansion-panel hideToggle *ngFor="let item of cinemaData$ | async">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{ item.PublishDate | date:'dd.MM.yyyy' }}
+
+            </mat-panel-title>
+            <mat-panel-description>
+                {{item.Title}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <div>
+            <img src={{item.ImageURL}} width="250px">
+        </div>
+
+    </mat-expansion-panel>
+</mat-accordion>
