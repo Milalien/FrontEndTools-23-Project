@@ -29,7 +29,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
+//--- pipes: ---
 import { DatePipe } from '@angular/common';
+import { MoviePipe } from './pipes/movie.pipe';
 
 
 
@@ -44,7 +46,8 @@ import { DatePipe } from '@angular/common';
     ToolbarComponent,
     TemplatedrivenformComponent,
     ReactiveformComponent,
-    CinemaComponent
+    CinemaComponent,
+    MoviePipe
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,7 @@ import { DatePipe } from '@angular/common';
     HttpClientModule,
     DatePipe
   ],
-  providers: [QuestionsService, CinemaService],
+  providers: [QuestionsService, CinemaService, MoviePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

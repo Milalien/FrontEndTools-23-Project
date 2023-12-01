@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CinemaService } from '../services/cinema.service';
 import { Observable } from 'rxjs';
+import { MoviePipe } from '../pipes/movie.pipe';
 
 @Component({
   selector: 'app-cinema',
@@ -8,11 +9,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./cinema.component.css']
 })
 export class CinemaComponent {
-  cinemaData$: Observable<[any]>;
+  cinemaData$: Observable<any>;
+  searchTerm: any;
 
-  constructor(private cinemaService: CinemaService) {
-    //this.cinemaData$ = this.cinemaService.getTestData();
+  constructor(private cinemaService: CinemaService, private moviePipe: MoviePipe) {
     this.cinemaData$ = this.cinemaService.getData();
-
   }
+
 }
