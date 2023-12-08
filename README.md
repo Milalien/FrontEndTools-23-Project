@@ -1,26 +1,43 @@
 # FrontEndTools1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+When you first open the application on your browser, you will find yourself in the "Calculator" page. In the top left corner there is the menu where you can navigate between the different pages.
 
-## Build
+### Toolbar
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The toolbar you use to navigate between pages, also has a "SIGN IN" button that redirects you into the "admin/login" page.
 
-## Running unit tests
+### Calculator
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A basic calculator, not much to it. Works by clicking on the buttons, can't write on it.
 
-## Running end-to-end tests
+### Feedback
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+A feedback form with sliders, description of your answer changes with you sliding it.
+
+### Template driven form
+
+A Template driven form. Form validating done by using ngModel directives on the inputfields.
+
+### Reactive form
+
+A Reactive form done with Angular Reactiveformsmodule. Form validators in the .ts file using Angular Forms Formcontrol.
+
+### Cinema
+
+A page that fetches information from Finnkino's news XML page. You can filter the news using the searchbar.
+
+### Login page
+
+A login page, uses the example user info for now. By clicking "SIGN IN", you get into the admin/main page where there is a "SIGN OUT" button.
+
 
 ## Further help
 
