@@ -7,6 +7,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { CinemaComponent } from './cinema/cinema.component';
+import { LoginComponent } from './admin/login/login.component';
+import { MainComponent } from './admin/main/main.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
@@ -15,6 +18,8 @@ const routes: Routes = [
   { path: 'templatedrivenform', component: TemplatedrivenformComponent },
   { path: 'reactiveform', component: ReactiveformComponent },
   { path: 'cinema', component: CinemaComponent },
+  { path: 'admin/login', component: LoginComponent },
+  { path: 'admin/main', component: MainComponent, canActivate: [authGuard], data: { targer: ['main'] } },
   { path: '', redirectTo: '/calculator', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent }
 ];

@@ -48,7 +48,7 @@
 
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password" formControlName="password">
+                        <input matInput type="password" placeholder="Password" formControlName="password">
                         <mat-error *ngIf="password?.hasError('required')">Enter your password</mat-error>
                         <mat-error *ngIf="password?.hasError('minlength')">Minimun 8 characters required</mat-error>
                         <mat-error *ngIf="password?.hasError('pattern')">Must contain 1 lowercase letter, 1 uppercase
@@ -59,7 +59,7 @@
 
                     <mat-form-field appearance="outline">
                         <mat-label>Confirm password</mat-label>
-                        <input matInput placeholder="Confirm password" formControlName="password2"
+                        <input matInput type="password" placeholder="Confirm password" formControlName="password2"
                             pattern="{{password?.value}}">
                         <mat-error *ngIf="password2?.hasError('required')">Repeat password</mat-error>
                         <mat-error *ngIf="password2?.hasError('pattern')">Password does not match</mat-error>
