@@ -38,6 +38,10 @@ A page that fetches information from Finnkino's news XML page. You can filter th
 
 A login page, uses the example user info for now. By clicking "SIGN IN", you get into the admin/main page where there is a "SIGN OUT" button.
 
+### Lipunmyynti
+
+Exam assigment. A form that you can use to order tickets, order information gets saved to "tilaukset" service.
+
 
 ## Further help
 
