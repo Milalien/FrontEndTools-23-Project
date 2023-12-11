@@ -15,6 +15,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { CinemaComponent } from './cinema/cinema.component';
 import { LoginComponent } from './admin/login/login.component';
 import { MainComponent } from './admin/main/main.component';
+import { LipunmyyntiComponent } from './lipunmyynti/lipunmyynti.component';
 //--- modules: ---
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -33,6 +34,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 //--- pipes: ---
 import { DatePipe } from '@angular/common';
 import { MoviePipe } from './pipes/movie.pipe';
@@ -40,6 +42,7 @@ import { MoviePipe } from './pipes/movie.pipe';
 import { CinemaService } from './services/cinema.service';
 import { QuestionsService } from './services/questions.service';
 import { AuthService } from './services/auth.service';
+import { TilauksetService } from './services/tilaukset.service';
 
 
 
@@ -56,13 +59,14 @@ import { AuthService } from './services/auth.service';
     CinemaComponent,
     MoviePipe,
     LoginComponent,
-    MainComponent
+    MainComponent,
+    LipunmyyntiComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    //--- modules: ---
+
     FormsModule,
     MatButtonModule,
     MatCardModule,
@@ -75,6 +79,7 @@ import { AuthService } from './services/auth.service';
     MatSelectModule,
     MatToolbarModule,
     MatSliderModule,
+    MatSlideToggleModule,
     ReactiveFormsModule,
     MatExpansionModule,
     HttpClientModule,
@@ -86,7 +91,7 @@ import { AuthService } from './services/auth.service';
     AngularFireAuthModule
 
   ],
-  providers: [QuestionsService, CinemaService, MoviePipe],
+  providers: [QuestionsService, CinemaService, MoviePipe, TilauksetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

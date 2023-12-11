@@ -1,0 +1,82 @@
+<h1>Maatalousnäyttelyn 2024 lipunmyynti</h1>
+<mat-card class="ticketsale">
+    <mat-card-content>
+
+        <form (ngSubmit)="onSubmit(form1)" #form1="ngForm">
+            <div class="formcontent">
+
+                <div>
+                    <h4>Peruslippu:</h4>
+                </div>
+                <div>
+                    <mat-slider min="0" max="10">
+                        <input matSliderThumb [(ngModel)]="tilaus.perusLiput" name="perus" #perus>
+                    </mat-slider>
+                    <p>{{perus.value}}</p>
+                </div>
+
+                <div>
+                    <h4>Opiskelija:</h4>
+                </div>
+                <div>
+                    <mat-slider min="0" max="10">
+                        <input matSliderThumb [(ngModel)]="tilaus.opiskelijaliput" name="opiskelija" #opiskelija>
+                    </mat-slider>
+                    <p>{{opiskelija.value}}</p>
+                </div>
+                <div>
+                    <h4>Eläkeläinen:</h4>
+                </div>
+                <div>
+                    <mat-slider min="0" max="10">
+                        <input matSliderThumb [(ngModel)]="tilaus.elakeLiput" name="elake" #elake>
+                    </mat-slider>
+                    <p>{{elake.value}}</p>
+                </div>
+                <div>
+
+                    <mat-slide-toggle [(ngModel)]="tilaus.member" name="member">MTK:n jäsen</mat-slide-toggle>
+
+                    <h4>Yhteensä: {{loppusumma(tilaus.perusLiput, tilaus.opiskelijaliput, tilaus.elakeLiput)}} €
+                    </h4>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Etunimi</mat-label>
+                        <input matInput placeholder="Etunimi" name="eNimi" [(ngModel)]="tilaus.eNimi" #eNimi="ngModel"
+                            required minlength="2" pattern="^[a-öA-Ö ]*$">
+                        <mat-error *ngIf="eNimi.hasError('required')">Syötä etunimesi</mat-error>
+                        <mat-error *ngIf="eNimi.hasError('minlength')">Min. 2 kirjainta</mat-error>
+                        <mat-error *ngIf="eNimi.hasError('pattern')">Täytyy olla oikea nimi</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sukunimi</mat-label>
+                        <input matInput placeholder="Sukunimi" name="sNimi" [(ngModel)]="tilaus.sNimi" #sNimi="ngModel"
+                            required minlength="2" pattern="^[a-öA-Ö ]*$">
+                        <mat-error *ngIf="sNimi.hasError('required')">Syötä sukunimesi</mat-error>
+                        <mat-error *ngIf="sNimi.hasError('minlength')">Min. 2 kirjainta</mat-error>
+                        <mat-error *ngIf="sNimi.hasError('pattern')">Täytyy olla oikea nimi</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sähköposti</mat-label>
+                        <input type=email matInput placeholder="Sähköposti" name="email" [(ngModel)]="tilaus.email"
+                            #email="ngModel" required minlength="5" pattern="^\S+@\S+\.\S{2,}$">
+                        <mat-error *ngIf="email.hasError('required')">Enter your email</mat-error>
+                        <mat-error *ngIf="email.hasError('minlength')">Minimun 5 characters required</mat-error>
+                        <mat-error *ngIf="email.hasError('pattern')">Must be valid email</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button color="accent" type="submit" [disabled]="form1.invalid">OSTA
+                        LIPUT</button>
+                </div>
+            </div>
+
+        </form>
+
+    </mat-card-content>
+</mat-card>

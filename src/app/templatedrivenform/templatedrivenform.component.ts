@@ -32,7 +32,15 @@ export class TemplatedrivenformComponent {
 
   }
   onSubmit(e: any) {
-    console.log(e.value.firstName);
-    console.log(e.controls['firstName'].status);
+    console.log(this.currentPerson.firstName);
+    console.log(this.currentPerson.lastName);
+    console.log(this.currentPerson.personId);
+    console.log(this.currentPerson.email);
+    console.log(this.currentPerson.username);
+
+
+
+
+
   }
 }

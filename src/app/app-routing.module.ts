@@ -10,6 +10,7 @@ import { CinemaComponent } from './cinema/cinema.component';
 import { LoginComponent } from './admin/login/login.component';
 import { MainComponent } from './admin/main/main.component';
 import { authGuard } from './auth.guard';
+import { LipunmyyntiComponent } from './lipunmyynti/lipunmyynti.component';
 
 const routes: Routes = [
   { path: 'calculator', component: CalculatorComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'cinema', component: CinemaComponent },
   { path: 'admin/login', component: LoginComponent },
   { path: 'admin/main', component: MainComponent, canActivate: [authGuard], data: { targer: ['main'] } },
+  { path: 'lipunmyynti', component: LipunmyyntiComponent },
   { path: '', redirectTo: '/calculator', pathMatch: 'full' },
   { path: '**', component: PagenotfoundComponent }
 ];
