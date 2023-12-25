@@ -32,7 +32,7 @@ A Reactive form done with Angular Reactiveformsmodule. Form validators in the .t
 
 ### Cinema
 
-A page that fetches information from Finnkino's news XML page. You can filter the news using the searchbar.
+A page that fetches information from Finnkino's news XML page. You can filter the news using the searchbar. This page is in finnish.
 
 ### Login page
 
@@ -40,7 +40,7 @@ A login page, uses the example user info for now. By clicking "SIGN IN", you get
 
 ### Lipunmyynti
 
-Exam assigment. A form that you can use to order tickets, order information gets saved to "tilaukset" service.
+Exam assigment. A form that you can use to order tickets, order information gets saved to "tilaukset" service. This page is in finnish.
 
 
 ## Further help
