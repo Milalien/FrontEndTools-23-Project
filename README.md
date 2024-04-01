@@ -1,48 +1,39 @@
 # FrontEndTools1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+Frond end työkalut -kurssin harjoitukset ja lopputehtävä(Lipunmyynti).
+Kurssin oppimistavoitteena oli opetella Angularin käyttöä mahdollisimman monipuolisesti.
 
-## Development server
+## Käyttö
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Kun avaat ohjelman ensimmäisen kerran (ng serve --open käskyllä), se ohjaa sinut suoraan Laskin-sivulle. Yläpalkin kautta voit navigoida tehtävien välillä.
 
-## Usage
 
-When you first open the application on your browser, you will find yourself in the "Calculator" page. In the top left corner there is the menu where you can navigate between the different pages.
+### Laskin
 
-### Toolbar
+Yksinkertainen perinteisen näköinen laskin. Toimii klikkaamalla, siihen ei voi suoraan kirjoittaa. 
 
-The toolbar you use to navigate between pages, also has a "SIGN IN" button that redirects you into the "admin/login" page.
+### Palautelomake
 
-### Calculator
-
-A basic calculator, not much to it. Works by clicking on the buttons, can't write on it.
-
-### Feedback
-
-A feedback form with sliders, description of your answer changes with you sliding it.
+Palautelomake joka toimii slidereilla.
 
 ### Template driven form
 
-A Template driven form. Form validating done by using ngModel directives on the inputfields.
+Mallipohjainen lomake.
 
 ### Reactive form
 
-A Reactive form done with Angular Reactiveformsmodule. Form validators in the .ts file using Angular Forms Formcontrol.
+Angularin Reactiveformsmodule:lla tehty lomake.
 
-### Cinema
+### Elokuvauutiset
 
-A page that fetches information from Finnkino's news XML page. You can filter the news using the searchbar. This page is in finnish.
+Sivulle haetaan uutisia Finnkinon XML sivulta. Voit filtteröidä uutisia hakukentän avulla.
 
-### Login page
+### Kirjautumissivu
 
-A login page, uses the example user info for now. By clicking "SIGN IN", you get into the admin/main page where there is a "SIGN OUT" button.
+Kirjautumissivu, jossa voi esimerkkitunnusten avulla kirjautua "Admin" näkymään. Toimi harjoituksena Firebasen käytön kanssa.
 
 ### Lipunmyynti
 
-Exam assigment. A form that you can use to order tickets, order information gets saved to "tilaukset" service. This page is in finnish.
+Tenttitehtävä. Sivulla on lomake, jolla voit tilata lippuja. Se laskee loppusumman suoraan, saat alennusta jäsenyyden klikkamalla. Tilauksen lähetysvaiheessa sen tiedot välittyvät TilausService-luokkaan taulukkoon, joka toimii väliaikaisena ratkaisuna back-endin puuttumisen johdosta. Tilauksen tiedot tulostuvat konsoliin Service-luokasta hakemalla tilauksen lähetysvaiheessa.
 
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
