@@ -11,7 +11,7 @@ export class FeedbackComponent {
 
   questions: Array<Question> = new Array;
 
-  constructor(private questionsService: QuestionsService) {
+  constructor(questionsService: QuestionsService) {
 
     this.questions = questionsService.getQuestions();
   }
@@ -20,19 +20,19 @@ export class FeedbackComponent {
     switch (event.target.value) {
 
       case '1':
-        question.description = "Terrible";
+        question.description = "Kauhea";
         break;
       case '2':
-        question.description = "Bad";
+        question.description = "Huono";
         break;
       case '3':
-        question.description = "Avarage";
+        question.description = "Keskiverto";
         break;
       case '4':
-        question.description = "Good";
+        question.description = "Hyvä";
         break;
       case '5':
-        question.description = "Exellent";
+        question.description = "Erinomainen";
         break;
 
     }

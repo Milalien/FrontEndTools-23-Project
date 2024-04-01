@@ -15,7 +15,7 @@ export class TemplatedrivenformComponent {
   userN: string = "";
   pWord: string = "";
   pWord2: string = "";
-  cond: any;
+  cond: boolean = false;
 
 
   currentPerson: Person = new Person();
@@ -37,10 +37,6 @@ export class TemplatedrivenformComponent {
     console.log(this.currentPerson.personId);
     console.log(this.currentPerson.email);
     console.log(this.currentPerson.username);
-
-
-
-
-
+    e.reset();
   }
 }

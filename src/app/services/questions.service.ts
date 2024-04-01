@@ -9,10 +9,10 @@ export class QuestionsService {
   constructor() { }
 
   getQuestions() {
-    return [new Question("How would you rate this class?"),
-    new Question("Your rating of this school?"),
-    new Question("How well are you motivated?"),
-    new Question("How would you rate your skills?"),
-    new Question("Your rating of the social enviroment?")];
+    return [new Question("Miten arvioisit tämän kurssin?"),
+    new Question("Miten arvioisit tämän koulun?"),
+    new Question("Mikä on motivaatiotasosi?"),
+    new Question("Miten arvioisit taitojesi tason?"),
+    new Question("Miten arvioisit koulumme ilmapiirin?")];
   }
 }

@@ -1,33 +1,27 @@
 import { Injectable } from '@angular/core';
+import { Tilaus } from '../tilaus';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TilauksetService {
-  perusLiput: number;
-  opiskelijaliput: number;
-  elakeLiput: number;
-  member: boolean;
-  eNimi: string;
-  sNimi: string;
-  email: string;
-  hinta: number;
-  private Tilaus: any[] = [];
+  //Toimii tilausten tallennuspaikkana mallin vuoksi, kun back-endiä ei ole.
+  tilaukset: Tilaus[] = [];
+
   constructor() {
-    this.perusLiput = 0;
-    this.opiskelijaliput = 0;
-    this.elakeLiput = 0;
-    this.member = false;
-    this.eNimi = "";
-    this.sNimi = "";
-    this.email = "";
-    this.hinta = 0;
+
   }
 
-  setTilaus(tilausTiedot: any[]) {
-    this.Tilaus = tilausTiedot;
+  //Tallettaa tilauksen tiedot Tilaus-tyyppiseen taulukkoon.
+  postTilaus(tilausTiedot: Tilaus) {
+    this.tilaukset.push(tilausTiedot);
   }
+  //Palauttaa koko tilaukset -taulukon sisällön.
+  getTilaukset() {
+    return this.tilaukset;
+  }
+  //Palauttaa viimeisimmän tilauksen mallin vuoksi, jotta saamme tässä vaiheessa ulos juuri tekemämme tilauksen.
   getTilaus() {
-    return this.Tilaus;
+    return this.tilaukset.at(-1);
   }
 }

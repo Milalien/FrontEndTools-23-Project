@@ -4,10 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
-import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { MatSliderModule } from '@angular/material/slider';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
@@ -30,6 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -49,7 +48,6 @@ import { TilauksetService } from './services/tilaukset.service';
 @NgModule({
   declarations: [
     AppComponent,
-    HelloWorldComponent,
     CalculatorComponent,
     PagenotfoundComponent,
     FeedbackComponent,

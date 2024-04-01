@@ -16,14 +16,12 @@ export class CalculatorComponent {
     if (value == "=") {
       try {
         this.result = eval(this.result);
-        console.log(this.result);
       }
       catch (x) {
-        console.log("Error");
+        console.log("Virhe");
       }
     } else if (value == "C") {
       this.result = "";
-      console.log(this.result);
     } else if (
       (this.prevVal == "+" ||
         this.prevVal == "-" ||
@@ -35,12 +33,11 @@ export class CalculatorComponent {
         value == "*"
       )) {
       this.result = this.result;
-      console.log("double operator not allwed");
+      console.log("Kahta operaattoria ei voi syöttää peräkkäin");
     }
 
     else {
       this.result = this.result + value;
-      console.log(this.result);
     }
 
     this.prevVal = value;

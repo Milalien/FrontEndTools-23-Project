@@ -34,8 +34,11 @@
                     <p>{{elake.value}}</p>
                 </div>
                 <div>
-
                     <mat-slide-toggle [(ngModel)]="tilaus.member" name="member">MTK:n jäsen</mat-slide-toggle>
+
+                </div>
+                <div>
+
 
                     <h4>Yhteensä: {{loppusumma(tilaus.perusLiput, tilaus.opiskelijaliput, tilaus.elakeLiput)}} €
                     </h4>
@@ -47,7 +50,7 @@
                             required minlength="2" pattern="^[a-öA-Ö ]*$">
                         <mat-error *ngIf="eNimi.hasError('required')">Syötä etunimesi</mat-error>
                         <mat-error *ngIf="eNimi.hasError('minlength')">Min. 2 kirjainta</mat-error>
-                        <mat-error *ngIf="eNimi.hasError('pattern')">Täytyy olla oikea nimi</mat-error>
+                        <mat-error *ngIf="eNimi.hasError('pattern')">Tarkista kirjoitusmuoto</mat-error>
                     </mat-form-field>
                 </div>
                 <div>
@@ -56,8 +59,8 @@
                         <input matInput placeholder="Sukunimi" name="sNimi" [(ngModel)]="tilaus.sNimi" #sNimi="ngModel"
                             required minlength="2" pattern="^[a-öA-Ö ]*$">
                         <mat-error *ngIf="sNimi.hasError('required')">Syötä sukunimesi</mat-error>
-                        <mat-error *ngIf="sNimi.hasError('minlength')">Min. 2 kirjainta</mat-error>
-                        <mat-error *ngIf="sNimi.hasError('pattern')">Täytyy olla oikea nimi</mat-error>
+                        <mat-error *ngIf="sNimi.hasError('minlength')">Vähintään 2 kirjainta</mat-error>
+                        <mat-error *ngIf="sNimi.hasError('pattern')">Tarkista kirjoitusmuoto</mat-error>
                     </mat-form-field>
                 </div>
                 <div>
@@ -65,9 +68,9 @@
                         <mat-label>Sähköposti</mat-label>
                         <input type=email matInput placeholder="Sähköposti" name="email" [(ngModel)]="tilaus.email"
                             #email="ngModel" required minlength="5" pattern="^\S+@\S+\.\S{2,}$">
-                        <mat-error *ngIf="email.hasError('required')">Enter your email</mat-error>
-                        <mat-error *ngIf="email.hasError('minlength')">Minimun 5 characters required</mat-error>
-                        <mat-error *ngIf="email.hasError('pattern')">Must be valid email</mat-error>
+                        <mat-error *ngIf="email.hasError('required')">Syötä sähköpostiosoitteesi</mat-error>
+                        <mat-error *ngIf="email.hasError('minlength')">Vähintään 5 merkkiä</mat-error>
+                        <mat-error *ngIf="email.hasError('pattern')">Tarkista kirjoitusmuoto</mat-error>
                     </mat-form-field>
                 </div>
                 <div>

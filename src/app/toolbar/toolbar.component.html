@@ -3,25 +3,25 @@
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with menu icon">
             <mat-icon>menu</mat-icon>
         </button>
-        <span>Front-end tools</span>
+        <span>Front-end työkalut</span>
 
         <span class="spacer"></span>
         <a routerLink="/admin/login" routerLinkActive="active" *ngIf="!(userEmail$ | async)">
-            <button mat-raised-button>SIGN IN</button>
+            <button mat-raised-button>KIRJAUDU SISÄÄN</button>
         </a>
         <div *ngIf="(userEmail$ | async)">
             {{userEmail$|async}}
-            <button mat-raised-button (click)="logOut()">SIGN OUT</button>
+            <button mat-raised-button (click)="logOut()">KIRJAUDU ULOS</button>
         </div>
 
     </mat-toolbar>
 </p>
 <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/calculator" routerLinkActive="active">
-        Calculator
+        Laskin
     </button>
     <button mat-menu-item routerLink="/feedback" routerLinkActive="active">
-        Give feedback
+        Palautelomake
     </button>
     <button mat-menu-item routerLink="/templatedrivenform" routerLinkActive="active">
         Template driven form
@@ -30,10 +30,10 @@
         Reactive form
     </button>
     <button mat-menu-item routerLink="/cinema" routerLinkActive="active">
-        Cinema
+        Elokuvauutiset
     </button>
     <button mat-menu-item routerLink="/admin/login" routerLinkActive="active">
-        Login page
+        Kirjautumissivu
     </button>
     <button mat-menu-item routerLink="/lipunmyynti" routerLinkActive="active">
         Lipunmyynti

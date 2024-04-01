@@ -19,7 +19,7 @@ export class ReactiveformComponent {
   userN: string = "";
   pWord: string = "";
   pWord2: string = "";
-  cond: any;
+  cond: boolean = false;
 
   person: Person = new Person();
 
@@ -71,9 +71,9 @@ export class ReactiveformComponent {
   }
 
   onSubmit() {
-    console.log('ProfileForm value: ' + this.ProfileForm.value);
-    console.log('ProfileForm value: ' + this.ProfileForm.value.firstname);
-    console.log('ProfileForm valid: ' + this.ProfileForm.valid);
-    this.ProfileForm.reset();
+    console.log('Etunimi: ' + this.ProfileForm.value.firstname);
+    console.log('Sukunimi: ' + this.ProfileForm.value.lastName);
+    console.log('Käyttäjätunnus: ' + this.ProfileForm.value.username);
+
   }
 }

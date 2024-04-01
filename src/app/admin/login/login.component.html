@@ -1,5 +1,5 @@
 <mat-card class="loginCard">
-    <mat-card-header><mat-card-title>Authentication to admin view</mat-card-title></mat-card-header>
+    <mat-card-header><mat-card-title>Kirjautumissivu - harjoitus</mat-card-title></mat-card-header>
 
     <mat-card-content>
         <form [formGroup]="LoginForm" (ngSubmit)="LogIn()">
@@ -7,23 +7,23 @@
 
 
                 <mat-form-field appearance="outline">
-                    <mat-label>Email</mat-label>
+                    <mat-label>sähköpostiosoitteesi</mat-label>
                     <input matInput placeholder="Email" formControlName="email">
-                    <mat-error *ngIf="email?.hasError('required')">Enter your email</mat-error>
-                    <mat-error *ngIf="email?.hasError('pattern')">No account for this email</mat-error>
+                    <mat-error *ngIf="email?.hasError('required')">Syötä sähköpostiosoitteesi</mat-error>
+                    <mat-error *ngIf="email?.hasError('pattern')">Ei käyttäjää tällä sähköpostilla</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
-                    <mat-label>Your password</mat-label>
+                    <mat-label>Salasanasi</mat-label>
                     <input matInput type="password" placeholder="Your password" formControlName="password">
-                    <mat-error *ngIf="password?.hasError('required')">Input password</mat-error>
-                    <mat-error *ngIf="password?.hasError('pattern')">Incorrect password</mat-error>
+                    <mat-error *ngIf="password?.hasError('required')">Kirjoita salasanasi</mat-error>
+                    <mat-error *ngIf="password?.hasError('pattern')">Väärä salasana</mat-error>
                 </mat-form-field>
 
             </div>
             <div class="btn">
 
-                <button mat-raised-button color="accent" type="submit">SIGN IN</button>
-                <button mat-raised-button color="accent" (click)="Cancel()">CANCEL</button>
+                <button mat-raised-button color="accent" type="submit">KIRJAUDU SISÄÄN</button>
+                <button mat-raised-button color="accent" (click)="Cancel()">PERUUTA</button>
 
             </div>
 

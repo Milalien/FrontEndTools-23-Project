@@ -1,6 +1,6 @@
 export class Question {
     header: string = "";
-    description = "Not yet rated";
+    description = "Ei arvioitu";
     constructor(h: string) {
         this.header = h;
 

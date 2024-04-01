@@ -5,7 +5,10 @@
 
             </mat-card-title>
             <mat-card-subtitle>
-                <input matInput placeholder="Kirjoita hakusana" [(ngModel)]="searchTerm">
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Kirjoita hakusana" [(ngModel)]="searchTerm">
+
+                </mat-form-field>
 
             </mat-card-subtitle></mat-card-header>
 
